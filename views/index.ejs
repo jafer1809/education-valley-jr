@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>index</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://www.youtube.com/iframe_api"></script>
+
+    </head>
+    <script>
+        function displaynext(){
+            x=(x===images.length-1)?0:x+1;
+            document.getElementById("img").src=images[x];
+        }
+        function displayprevious(){
+            x=(x<=0)?images.length-1:x-1;
+            document.getElementById("img").src=images[x];
+        }
+ 
+        function starttimer(){
+            setInterval(displaynext,3000);
+            
+        }
+        var images=[],x=-1;
+        images[0]="images/2.jpg";
+        images[1]="images/DOC-20230214-WA0068._page-0003.jpg";
+        images[2]="images/DOC-20230214-WA0068._page-0004.jpg";
+        images[3]="images/DOC-20230214-WA0068._page-0005.jpg";
+        images[4]="images/DOC-20230214-WA0068._page-0006.jpg";
+        images[5]="images/DOC-20230214-WA0068._page-0007.jpg";
+        images[6]="images/DOC-20230214-WA0068._page-0008.jpg";
+        images[7]="images/DOC-20230214-WA0068._page-0009.jpg";
+        images[8]="images/DOC-20230214-WA0068._page-00010.jpg";
+        images[9]="images/DOC-20230214-WA0068._page-00011.jpg";
+        images[10]="images/DOC-20230214-WA0068._page-00012.jpg";
+    </script>
+    <body onload="starttimer()">
+        <div class="navbar">
+            <img  src="images\1.jpg">
+        </div>
+        <h1> what we offer</h1>
+      <img id="img" src="images\2.jpg">
+      <div id="player"></div>
+
+    <script>
+      // Load the YouTube iframe API asynchronously
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // Create a global variable for the player
+      var player;
+
+      // Callback function called when the API is ready
+      function onYouTubeIframeAPIReady() {
+        // Create the player object
+        player = new YT.Player('player', {
+          height: '360',
+          width: '360',
+          videoId: '8hoEfd_ZIpM', // Replace with the actual YouTube video ID
+          playerVars: {
+            autoplay: 1, // Set to 0 if you don't want the video to autoplay
+          },
+        });
+      }
+    </script>
+    <div id="player"></div>
+
+    <script>
+      // Load the YouTube iframe API asynchronously
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // Create a global variable for the player
+      var player;
+
+      // Callback function called when the API is ready
+      function onYouTubeIframeAPIReady() {
+        // Create the player object
+        player = new YT.Player('player', {
+          height: '360',
+          width: '360',
+          videoId: '8hoEfd_ZIpM', // Replace with the actual YouTube video ID
+          playerVars: {
+            autoplay: 1, // Set to 0 if you don't want the video to autoplay
+          },
+        });
+      }
+    </script>
+    </body>
+</html>
